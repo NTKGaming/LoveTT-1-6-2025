@@ -12,11 +12,11 @@ body{
 }
 
 h2 {
-    font-size:1.15em;
+    font-size:1.3em;
     font-family: 'Pacifico';
     color:#fff;
     animation: blink 1s infinite;
-    margin-top: 1.75em;
+    margin-top: 3em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +73,7 @@ h1 , .start {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: -11.5rem;
+    margin-top: -15.5rem;
 
 
 
@@ -86,8 +86,8 @@ button a{
 button{
     font-family: 'Pacifico';
     font-size: 1.25rem;
-    width:10rem;
-    height:2.5rem;
+    width:15rem;
+    height:4rem;
     border-radius: 8rem;
     border:0.1em solid pink;
     color:rgba(228, 45, 115, 0.897);
