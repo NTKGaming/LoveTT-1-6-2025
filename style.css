@@ -73,7 +73,7 @@ h1 , .start {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: 1.5rem;
+    margin-top: -10rem;
 
 
 
@@ -98,8 +98,8 @@ button{
 
 button:hover {
     font-size:1.5rem;
-    width:13rem;
-    height:3rem;
+    width:20rem;
+    height:7rem;
     border-radius: 8rem;
     border:0.1em solid pink;
     color:#fff;
