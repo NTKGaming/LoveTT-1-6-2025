@@ -16,7 +16,7 @@ h2 {
     font-family: 'Pacifico';
     color:#fff;
     animation: blink 1s infinite;
-    margin-top: 3em;
+    margin-top: 1.75em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,8 +73,7 @@ h1 , .start {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top:-15rem;
-
+    margin-top: -15rem;
 
 
 
@@ -86,9 +85,9 @@ button a{
 
 button{
     font-family: 'Pacifico';
-    font-size: 2rem;
-    width:18rem;
-    height:6rem;
+    font-size: 1.3rem;
+    width:13rem;
+    height:3rem;
     border-radius: 8rem;
     border:0.1em solid pink;
     color:rgba(228, 45, 115, 0.897);
@@ -99,8 +98,8 @@ button{
 
 button:hover {
     font-size:1.5rem;
-    width:20rem;
-    height:7rem;
+    width:15rem;
+    height:4rem;
     border-radius: 8rem;
     border:0.1em solid pink;
     color:#fff;
