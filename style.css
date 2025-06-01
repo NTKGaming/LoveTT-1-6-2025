@@ -73,7 +73,7 @@ h1 , .start {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: -15.5rem;
+    margin-top: 1.5rem;
 
 
 
@@ -85,9 +85,9 @@ button a{
 
 button{
     font-family: 'Pacifico';
-    font-size: 1.25rem;
-    width:15rem;
-    height:4rem;
+    font-size: 2rem;
+    width:18rem;
+    height:6rem;
     border-radius: 8rem;
     border:0.1em solid pink;
     color:rgba(228, 45, 115, 0.897);
