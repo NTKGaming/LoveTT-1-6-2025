@@ -1,0 +1,114 @@
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body{
+    background: url('./Arts/background.jpg') no-repeat center;
+    background-size: cover;
+
+    height:100vh;
+}
+
+h2 {
+    font-size:1.15em;
+    font-family: 'Pacifico';
+    color:#fff;
+    animation: blink 1s infinite;
+    margin-top: 1.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: textshadow 1s linear infinite;
+    text-shadow: none;
+
+
+
+}
+
+@keyframes textshadow {
+    0%{
+     text-shadow: 0 1px 10px #ff00cc;
+    }
+    25%{
+        text-shadow: 0 2px 20px #ff33cc;
+    }
+    50%{
+        text-shadow: 0 3px 30px #ff66cc;
+    }
+    75%{
+        text-shadow: 0 4px 40px #ff99cc;
+    } 
+    100%{
+        text-shadow: 0 5px 50px #ff13cc;
+    }
+    
+}
+@keyframes blink {
+    0%,100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+h1{
+    font-size: 2rem;
+    font-family: 'Pacifico';
+    color:rgb(243, 53, 170);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+
+}
+h1 , .start {
+    position: relative;
+    bottom:1.8em;
+}
+.start {
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: -11.5rem;
+
+
+
+}
+button a{
+    text-decoration: none;
+    color:rgba(228, 45, 115, 0.897);
+}
+
+button{
+    font-family: 'Pacifico';
+    font-size: 1.25rem;
+    width:10rem;
+    height:2.5rem;
+    border-radius: 8rem;
+    border:0.1em solid pink;
+    color:rgba(228, 45, 115, 0.897);
+    box-shadow: 0 0 2px 5px pink;
+    animation: blink 1.5s linear infinite;
+
+}
+
+button:hover {
+    font-size:1.5rem;
+    width:13rem;
+    height:3rem;
+    border-radius: 8rem;
+    border:0.1em solid pink;
+    color:#fff;
+    box-shadow: 0 0 2px 5px pink;
+    background-color:rgba(228, 45, 115, 0.897);
+
+}
+button a:hover{
+    color:#fff;
+}
+
+
