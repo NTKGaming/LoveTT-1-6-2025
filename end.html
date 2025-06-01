@@ -1,202 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-  />
-  <title>Maiiii Iuuuuu</title>
-  <style>
-    body {
-      background: url('./Arts/background2.jpg') no-repeat center;
-      background-size: cover;
-    }
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  // Khởi tạo EmailJS
+  (function () {
+    emailjs.init("wKfRxI-G5jn8WicaO"); // public key của bạn
+  })();
 
-    h1, h2 {
-      font-size: 1.7em;
-      font-family: 'Pacifico';
-      text-align: center;
-      color: #fff;
-      text-shadow: 0 0 5px #ff00cc,
-                   0 0 10px #ff33cc,
-                   0 0 15px #ff66cc,
-                   0 0 20px #ff99cc;
-                   
-    }
+  const yes = document.getElementById('yes');
+  const no = document.getElementById('no');
+  const gif = document.getElementById('gif');
+  const gif2 = document.getElementById('gif2');
+  const gif3 = document.getElementById('gif3');
+  const text = document.getElementById('loveMessage');
+  const h1 = document.getElementById('h1');
+  const h2 = document.getElementById('h2');
 
-    h2 {
-      display: none;
-      animation: fadeInAndShake 1s ease forwards;
-    }
+  // Hàm gửi email
+  function sendEmail(answer) {
+    const templateParams = {
+      user_name: "Bé Thiên",
+      answer: answer,
+      timestamp: new Date().toLocaleString(),
+    };
 
-    #no {
-      border: 3px solid rgb(255, 105, 180);
-      background-color: rgba(247, 51, 83, 0.7);
-      color: #fff;
-      position: absolute;
-      margin-top: 4em;
-      width: 10em;
-      height: 3em;
-      border-radius: 2em;
-      transition: all 0.3s;
-      cursor: pointer;
-    }
+    emailjs
+      .send("service_qxu6r0h", "template_tennguoidung", templateParams)
+      .then((response) => {
+        console.log("Email sent successfully!", response.status, response.text);
+      })
+      .catch((error) => {
+        console.error("Email send error:", error);
+      });
+  }
 
-    #no:hover {
-      transform: scale(1.2);
-      background-color: rgba(255, 105, 180, 0.9);
-    }
+  no.addEventListener('click', () => {
+    const x = Math.floor(Math.random() * (window.innerWidth - 200));
+    const y = Math.floor(Math.random() * (window.innerHeight - 400));
+    no.style.left = `${x}px`;
+    no.style.top = `${y}px`;
 
-    #yes {
-      border: 3px solid rgb(40, 214, 40);
-      background-color: green;
-      color: #fff;
-      width: 10em;
-      height: 3em;
-      border-radius: 2em;
-      margin-bottom: 1em;
-      transition: all 0.3s;
-      cursor: pointer;
-    }
+    gif.style.display = 'none';
+    gif2.style.display = 'flex';
 
-    #yes:hover {
-      transform: scale(1.3);
-      background-color: #00cc44;
-    }
+    console.log('Bé Thiên đã từ chối lời tỏ tình của bạn');
+    sendEmail("Bé Thiên đã từ chối lời tỏ tình của bạn");
 
-    .button {
-      margin-top: 0.5em;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .gif, .gif2, .gif3 {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .gif {
-      display: flex;
-    }
-
-    #loveMessage {
-      display: none;
-      font-family: 'Pacifico';
-      font-size: 2em;
-      justify-content: center;
-      align-items: center;
-      margin-top: -30px;
-      color: #fff;
-      text-shadow: 0 0 5px #ff00cc,
-                   0 0 10px #ff33cc,
-                   0 0 15px #ff66cc,
-                   0 0 20px #ff99cc;
-    }
-
-    /* Hiệu ứng xuất hiện và lắc nhẹ */
-    @keyframes fadeInAndShake {
-      0% {
-        opacity: 0;
-        transform: translateX(10);
-      }
-      50% {
-        opacity: 1;
-        transform: translateX(-30px);
-      }
-      75% {
-        transform: translateX(30px);
-      }
-      100% {
-        transform: translateX(10);
-      }
-    }
-
-    #loveMessage.animate {
-      animation: fadeInAndShake 3s ease infinite;
-    }
-  </style>
-</head>
-
-<body>
-  <h2 id="h2">Cảm Ơn Vì Đã Đến</h2>
-  <h1 id="h1">Làm Người Yêu Anh Nhé Thiênnnn</h1>
-
-  <div id="gif" class="gif">
-    <img
-      src="https://media.giphy.com/media/rL0yRrsd5a5PSeUMe7/giphy.gif"
-      alt="gif"
-      width="300px"
-    />
-  </div>
-  <div id="gif2" class="gif2">
-    <img
-      src="https://media.giphy.com/media/bhpBJiz45YjYeGRsRB/giphy.gif"
-      alt="gif2"
-      width="300px"
-    />
-  </div>
-  <div id="gif3" class="gif3">
-    <img
-      src="https://media.giphy.com/media/gdspgdOIV1HxhnxQOH/giphy.gif"
-      alt="gif3"
-      width="300px"
-    />
-  </div>
-
-  <div class="button">
-    <button type="button" id="yes">Dạ Cooo</button><br />
-    <button type="button" id="no">Honggggg</button><br />
-  </div>
-
-  <div id="loveMessage">Anh cũng yêu em ❤️</div><br /><br /><br /><br /></br>
-
-  <script>
-    const yes = document.getElementById('yes');
-    const no = document.getElementById('no');
-    const gif = document.getElementById('gif');
-    const gif2 = document.getElementById('gif2');
-    const gif3 = document.getElementById('gif3');
-    const text = document.getElementById('loveMessage');
-    const h1 = document.getElementById('h1');
-    const h2 = document.getElementById('h2');
-
-    no.addEventListener('click', () => {
-      const x = Math.floor(Math.random() * (window.innerWidth - 200));
-      const y = Math.floor(Math.random() * (window.innerHeight - 600));
-      no.style.left = `${x}px`;
-      no.style.top = `${y}px`;
-
-      gif.style.display = 'none';
-      gif2.style.display = 'flex';
-
-      console.log('Bé Thiên Đã từ chối lời tỏ tình của Bạn');
-
-      setTimeout(() => {
-        gif.style.display = 'flex';
-        gif2.style.display = 'none';
-      }, 500);
-    });
-
-    yes.addEventListener('click', () => {
-      gif.style.display = 'none';
+    setTimeout(() => {
+      gif.style.display = 'flex';
       gif2.style.display = 'none';
-      gif3.style.display = 'flex';
-      yes.style.display = 'none';
-      no.style.display = 'none';
-      text.style.display = 'flex';
-      text.classList.add('animate'); // Thêm hiệu ứng
-      h1.style.display = 'none';
-      h2.style.display = 'block';
+    }, 500);
+  });
 
-      console.log('Bé Thiên Đã Chấp Nhận lời tỏ tình của Bạn');
-    });
-  </script>
-</body>
-</html>
+  yes.addEventListener('click', () => {
+    gif.style.display = 'none';
+    gif2.style.display = 'none';
+    gif3.style.display = 'flex';
+    yes.style.display = 'none';
+    no.style.display = 'none';
+    text.style.display = 'flex';
+    text.classList.add('animate');
+    h1.style.display = 'none';
+    h2.style.display = 'block';
+
+    console.log('Bé Thiên đã chấp nhận lời tỏ tình của bạn');
+    sendEmail("Bé Thiên đã chấp nhận lời tỏ tình của bạn");
+  });
+</script>
