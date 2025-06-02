@@ -34,7 +34,7 @@
       height: 3.5em;
       border-radius: 2em;
       transition: all 0.3s;
-      cursor: pointer;
+/*       cursor: pointer; */
     }
 
     #no:hover {
@@ -160,7 +160,7 @@
       );
     }
 
-    no.addEventListener('click', () => {
+    no.addEventListener('touchstart', () => {
       const x = Math.floor(Math.random() * (window.innerWidth - 200));
       const y = Math.floor(Math.random() * (window.innerHeight - 550));
       no.style.left = `${x}px`;
